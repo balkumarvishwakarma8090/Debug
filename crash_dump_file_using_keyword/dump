@@ -1,0 +1,8 @@
+
+1.Window + R -> verifier
+2.Select ->Display existing settings->I/O verification ,DMA checking
+3.click finish
+4.registry editors
+With PS/2 keyboards, you must enable the keyboard-initiated crash in the registry. In the registry key HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\i8042prt\Parameters, create a value named CrashOnCtrlScroll, and set it equal to a REG_DWORD value of 0x01.
+After press ctr+Scroll lock (use keyword for Logitech)
+then find dump file in your location
