@@ -1,0 +1,15 @@
+How to collect ETL logs:
+1. Create logs.reg file which contains all register entries from the bottom of this site. Ready to use file is available here
+Copy file to tested machine if needed.
+2. Right click on this file and choose "merge". This action should be done only once.
+From next boot OS should start collect ETL logs
+3. Reboot OS
+4. After each boot ETL log should be create in C:\Windows\Tracing folder. In this step, size of this folder should be 0 because logs are saved after each reboot.
+Each OS reboot cause that ETL logs from RAM are collected and saved to previously created ETL log with 0 kb size.
+ETL logs contain information from start to shutdown OS
+5. In practice testing with collecting ETL logs should looks like that
+• OS is starting. New ETL log file is created with 0 kb size.
+• Testing
+• OS Reboot
+Save ETL file with nonzero size
+after more then one restart ETL log file is more then 0kb
